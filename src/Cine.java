@@ -56,5 +56,8 @@ public class Cine {
     public void addSala(int cupo){
         salas.add(new Sala(salas.size(), cupo ));
     }
+    public Boolean verificarCompraEntrada(int id){
+        return this.boleteria.getEntradas().stream().anyMatch(entrada -> entrada.getNroBoleto() == id);
+    }
 }
 

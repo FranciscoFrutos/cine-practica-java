@@ -36,4 +36,8 @@ public class Boleteria {
         System.out.println("Venta fallida");
         return null;
     }
+
+    public ArrayList<Entrada> getEntradas() {
+        return entradas;
+    }
 }

@@ -44,4 +44,12 @@ public class Cliente extends Persona{
         }
 
     }
+
+    public void usarEntrada(int nroEntrada) {
+        if (entradas.removeIf(entrada -> entrada.getNroBoleto() == nroEntrada )){
+            System.out.println("Entrada utilizada");
+        }else {
+            System.out.println("Entrada incorrecta.");
+        }
+    }
 }

@@ -29,4 +29,8 @@ public class InputHandler {
         return scanner.nextInt();
     }
 
+    public int number(){
+        return scanner.nextInt();
+    }
+
 }

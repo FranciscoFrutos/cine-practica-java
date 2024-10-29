@@ -17,6 +17,18 @@ public class Main {
             if (!cliente1.getEntradas().isEmpty()) {
                 cliente1.getEntradas().forEach(entrada -> System.out.println("Boleto nro: " + entrada.getNroBoleto() + " butaca: " + entrada.getNroButaca() + " Cliente: " + entrada.getNroCliente() + " sala: " + entrada.getNroSala() + " funcion: " + entrada.getFechaHorario()));
             }
+            System.out.println("Usar entrada?: ");
+            int usarEntrada = input.select();
+            while (usarEntrada > 0) {
+                System.out.println("Boleto nro: ");
+                int entrada = input.number();
+                if (cine.verificarCompraEntrada(entrada)){
+                    cliente1.usarEntrada(entrada);
+                }
+                System.out.println("Usar entrada?: ");
+                usarEntrada = input.select();
+            }
+
             System.out.println("0 to exit");
             choice = input.select();
         }
